@@ -43,7 +43,7 @@ implementation 'com.smartystreets.api:smartystreets-java-sdk:LATEST_VERSION'
 
 ### Android Projects
 
-When using this library in an Android project, exclude conflicting dependencies:
+When using this library in an Android project, exclude conflicting dependencies: 
 
 ```xml
 <dependency>
