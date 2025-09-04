@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.net.Proxy;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class UsStreetSingleAddressExample {
     public static void main(String[] args) {
@@ -22,6 +23,7 @@ public class UsStreetSingleAddressExample {
 
         Client client = new ClientBuilder(credentials)
         //        .withProxy(Proxy.Type.HTTP, "localhost", 8080) // Uncomment this line to try it with a proxy
+                .withCustomBaseUrl(Objects.requireNonNullElse(System.getenv("SMARTY_CUSTOM_BASE_URL"), ""))
                 .buildUsStreetApiClient();
 
         // Documentation for input fields can be found at:

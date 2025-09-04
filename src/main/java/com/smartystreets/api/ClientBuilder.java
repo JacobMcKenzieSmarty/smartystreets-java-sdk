@@ -98,6 +98,9 @@ public class ClientBuilder {
      * @return Returns <b>this</b> to accommodate method chaining.
      */
     public ClientBuilder withCustomBaseUrl(String baseUrl) {
+        if (baseUrl == null || baseUrl.isEmpty()) {
+            return this;
+        }
         this.urlPrefix = baseUrl;
         return this;
     }
