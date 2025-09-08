@@ -1,7 +1,8 @@
 package examples;
 
 import com.smartystreets.api.StaticCredentials;
-import com.smartystreets.api.SharedCredentials;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.smartystreets.api.exceptions.SmartyException;
 import com.smartystreets.api.us_street.*;
 import com.smartystreets.api.ClientBuilder;
@@ -68,5 +69,13 @@ public class UsStreetSingleAddressExample {
         System.out.println("County: " + firstCandidate.getMetadata().getCountyName());
         System.out.println("Latitude: " + firstCandidate.getMetadata().getLatitude());
         System.out.println("Longitude: " + firstCandidate.getMetadata().getLongitude());
+
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            String jsonResponse = mapper.writeValueAsString(results);
+            System.err.println("<JSONSTART>" + jsonResponse + "<JSONEND>");
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
     }
 }
