@@ -8,6 +8,8 @@ public class RootAddress {
 
     private String smartyKey;
 
+    private int smartyKeyExt;
+
     private String primaryNumber;
 
     private String streetPredirection;
@@ -34,6 +36,11 @@ public class RootAddress {
     @JsonProperty("smarty_key")
     public String getSmartyKey() {
         return smartyKey;
+    }
+
+    @JsonProperty("smarty_key_ext")
+    public int getSmartyKeyExt() {
+        return smartyKeyExt;
     }
 
     @JsonProperty("primary_number")
@@ -86,6 +93,7 @@ public class RootAddress {
         return "RootAddress{" +
                 "secondary_count=" + getSecondaryCount() +
                 ", smarty_key='" + getSmartyKey() + '\'' +
+                ", smarty_key_ext=" + getSmartyKeyExt() +
                 ", primary_number='" + getPrimaryNumber() + '\'' +
                 ", street_predirection='" + getStreetPredirection() + '\'' +
                 ", street_name='" + getStreetName() + '\'' +

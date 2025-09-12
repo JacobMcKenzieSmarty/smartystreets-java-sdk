@@ -6,6 +6,8 @@ public class Secondary {
 
     private String smartyKey;
 
+    private int smartyKeyExt;
+
     private String secondaryDesignator;
 
     private String secondaryNumber;
@@ -15,6 +17,11 @@ public class Secondary {
     @JsonProperty("smarty_key")
     public String getSmartyKey() {
         return smartyKey;
+    }
+
+    @JsonProperty("smarty_key_ext")
+    public int getSmartyKeyExt() {
+        return smartyKeyExt;
     }
 
     @JsonProperty("secondary_designator")
@@ -36,6 +43,7 @@ public class Secondary {
     public String toString() {
         return "Secondary{" +
                 "smarty_key='" + getSmartyKey() + '\'' +
+                ", smarty_key_ext=" + getSmartyKeyExt() +
                 ", secondary_designator='" + getSecondaryDesignator() + '\'' +
                 ", secondary_number='" + getSecondaryNumber() + '\'' +
                 ", plus4_code='" + getPlus4Code() + '\'' +

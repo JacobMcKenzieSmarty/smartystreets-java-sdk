@@ -6,6 +6,8 @@ public class Alias {
 
     private String smartyKey;
 
+    private int smartyKeyExt;
+
     private String primaryNumber;
 
     private String streetPredirection;
@@ -27,6 +29,11 @@ public class Alias {
     @JsonProperty("smarty_key")
     public String getSmartyKey() {
         return smartyKey;
+    }
+
+    @JsonProperty("smarty_key_ext")
+    public int getSmartyKeyExt() {
+        return smartyKeyExt;
     }
 
     @JsonProperty("primary_number")
@@ -78,6 +85,7 @@ public class Alias {
     public String toString() {
         return "Alias{" +
                 "smarty_key='" + getSmartyKey() + '\'' +
+                ", smarty_key_ext=" + getSmartyKeyExt() +
                 ", primary_number='" + getPrimaryNumber() + '\'' +
                 ", street_predirection='" + getStreetPredirection() + '\'' +
                 ", street_name='" + getStreetName() + '\'' +

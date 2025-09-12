@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 public class SecondaryResponse extends Result {
     private String smartyKey;
+    private int smartyKeyExt;
     private RootAddress rootAddress;
     private ArrayList<Alias> aliases;
     private ArrayList<Secondary> secondaries;
@@ -13,6 +14,11 @@ public class SecondaryResponse extends Result {
     @JsonProperty("smarty_key")
     public String getSmartyKey() {
         return smartyKey;
+    }
+
+    @JsonProperty("smarty_key_ext")
+    public int getSmartyKeyExt() {
+        return smartyKeyExt;
     }
 
     @JsonProperty("root_address")
