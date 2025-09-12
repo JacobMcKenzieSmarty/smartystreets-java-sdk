@@ -5,6 +5,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Result extends EnrichmentToStringer {
     @JsonProperty("smarty_key")
     private String smartyKey;
+    @JsonProperty("smarty_key_ext")
+    private int smartyKeyExt;
     @JsonProperty("data_set_name")
     private String datasetName;
     @JsonProperty("data_subset_name")
@@ -20,6 +22,10 @@ public class Result extends EnrichmentToStringer {
 
     public String getSmartyKey() {
         return smartyKey;
+    }
+
+    public int getSmartyKeyExt() {
+        return smartyKeyExt;
     }
 
     public String getDatasetName() {
